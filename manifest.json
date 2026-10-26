@@ -1,0 +1,20 @@
+{
+  "id": "glsl-playground",
+  "title": {
+    "en": "glsl-playground",
+    "zh": "GLSL 游乐场"
+  },
+  "intro": {
+    "en": "A phone shader: spectral voice ribbons under a liquid-glass lens. Drag down from the top to pull a droplet into a search pill, and tap to melt the ribbon into fluid orbs.",
+    "zh": "手机上的着色器：光谱声纹托着一枚液态玻璃透镜。从顶部向下拖出液滴，松手凝成搜索胶囊；轻点画面，声纹融成流体圆点。"
+  },
+  "officialFiles": [
+    "vendor/index.html",
+    "vendor/playground.css",
+    "vendor/playground.js",
+    "vendor/LICENSE.txt"
+  ],
+  "playHtml": "play.html",
+  "aspect": "phone",
+  "githubRepo": "ypaaaaaaaaaaaaa/glsl-playground"
+}
