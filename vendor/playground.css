@@ -1,0 +1,103 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #070510;
+  color: #f3efe6;
+  font-family: system-ui, -apple-system, sans-serif;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body { position: relative; }
+#stage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+#hint, #foot {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+#hint {
+  left: 12px;
+  right: 64px;
+  bottom: 72px;
+  font: 600 13px/1.35 system-ui, -apple-system, sans-serif;
+  color: rgba(244, 240, 232, 0.88);
+  transition: opacity 0.7s ease;
+}
+#hint.off { opacity: 0; }
+#foot {
+  left: 12px;
+  right: 64px;
+  bottom: 10px;
+  font: 400 10px/1.35 system-ui, -apple-system, sans-serif;
+  color: rgba(214, 208, 196, 0.62);
+}
+#gear {
+  position: absolute;
+  z-index: 5;
+  right: 8px;
+  bottom: 8px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(10, 8, 18, 0.38);
+  color: rgba(255, 255, 255, 0.82);
+  font: 600 18px/44px system-ui, -apple-system, sans-serif;
+  letter-spacing: 1px;
+  touch-action: manipulation;
+}
+html.on #gear { background: rgba(255, 255, 255, 0.16); }
+#panel {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  left: 10px;
+  right: 10px;
+  bottom: 60px;
+  max-height: 40%;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(12, 9, 20, 0.88);
+  touch-action: pan-y;
+}
+html.on #panel { display: block; }
+#panel .name {
+  margin: 0 0 8px;
+  font: 600 14px/1.2 system-ui, -apple-system, sans-serif;
+}
+#panel .row { display: flex; gap: 8px; }
+#panel button {
+  flex: 1 1 auto;
+  min-height: 44px;
+  margin: 0 0 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f6f2ea;
+  font: 600 14px/1 system-ui, -apple-system, sans-serif;
+}
+#panel button.on {
+  background: rgba(255, 186, 96, 0.22);
+  border-color: rgba(255, 196, 120, 0.55);
+}
+#panel button:active { background: rgba(255, 255, 255, 0.16); }
+#panel .help, #panel .credit {
+  margin: 0;
+  font: 400 12px/1.4 system-ui, -apple-system, sans-serif;
+  color: rgba(236, 230, 220, 0.78);
+}
+#panel .credit { margin-top: 8px; color: rgba(236, 230, 220, 0.55); font-size: 11px; }
